@@ -14,5 +14,14 @@ namespace Fathom.Tests.Objects
             var result = sut.IsNotNull();
             result.Should().BeFalse();
         }
+        
+        [Fact]
+        public void NotNullObject_IsNotNull_True()
+        {
+            object sut = "foo";
+
+            var result = sut.IsNotNull();
+            result.Should().BeTrue();
+        }
     }
 }
